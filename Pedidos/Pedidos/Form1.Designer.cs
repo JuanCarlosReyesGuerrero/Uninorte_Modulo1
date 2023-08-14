@@ -100,14 +100,14 @@
             // mostrarToolStripMenuItem
             // 
             mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
-            mostrarToolStripMenuItem.Size = new Size(180, 22);
+            mostrarToolStripMenuItem.Size = new Size(116, 22);
             mostrarToolStripMenuItem.Text = "Mostrar";
             mostrarToolStripMenuItem.Click += mostrarToolStripMenuItem_Click;
             // 
             // agregarToolStripMenuItem
             // 
             agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            agregarToolStripMenuItem.Size = new Size(180, 22);
+            agregarToolStripMenuItem.Size = new Size(116, 22);
             agregarToolStripMenuItem.Text = "Agregar";
             agregarToolStripMenuItem.Click += agregarToolStripMenuItem_Click;
             // 
@@ -182,7 +182,6 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
