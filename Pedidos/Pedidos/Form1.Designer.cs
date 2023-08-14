@@ -35,16 +35,21 @@
             inicioToolStripMenuItem = new ToolStripMenuItem();
             directorioToolStripMenuItem = new ToolStripMenuItem();
             operacionesToolStripMenuItem = new ToolStripMenuItem();
+            ventasToolStripMenuItem = new ToolStripMenuItem();
+            abastecimientosToolStripMenuItem = new ToolStripMenuItem();
             productosToolStripMenuItem = new ToolStripMenuItem();
             mostrarToolStripMenuItem = new ToolStripMenuItem();
             agregarToolStripMenuItem = new ToolStripMenuItem();
             inventarioToolStripMenuItem = new ToolStripMenuItem();
+            visualizarToolStripMenuItem = new ToolStripMenuItem();
+            abastecerToolStripMenuItem = new ToolStripMenuItem();
             ayudaToolStripMenuItem = new ToolStripMenuItem();
             dtgPrincipal = new DataGridView();
             btnBuscar = new Button();
             txtProducto = new TextBox();
             label1 = new Label();
             btnVerVenta = new Button();
+            acercaDeToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgPrincipal).BeginInit();
             SuspendLayout();
@@ -86,9 +91,24 @@
             // 
             // operacionesToolStripMenuItem
             // 
+            operacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ventasToolStripMenuItem, abastecimientosToolStripMenuItem });
             operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
             operacionesToolStripMenuItem.Size = new Size(85, 20);
             operacionesToolStripMenuItem.Text = "Operaciones";
+            // 
+            // ventasToolStripMenuItem
+            // 
+            ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            ventasToolStripMenuItem.Size = new Size(162, 22);
+            ventasToolStripMenuItem.Text = "Ventas";
+            ventasToolStripMenuItem.Click += ventasToolStripMenuItem_Click;
+            // 
+            // abastecimientosToolStripMenuItem
+            // 
+            abastecimientosToolStripMenuItem.Name = "abastecimientosToolStripMenuItem";
+            abastecimientosToolStripMenuItem.Size = new Size(162, 22);
+            abastecimientosToolStripMenuItem.Text = "Abastecimientos";
+            abastecimientosToolStripMenuItem.Click += abastecimientosToolStripMenuItem_Click;
             // 
             // productosToolStripMenuItem
             // 
@@ -113,12 +133,28 @@
             // 
             // inventarioToolStripMenuItem
             // 
+            inventarioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { visualizarToolStripMenuItem, abastecerToolStripMenuItem });
             inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
             inventarioToolStripMenuItem.Size = new Size(72, 20);
             inventarioToolStripMenuItem.Text = "Inventario";
             // 
+            // visualizarToolStripMenuItem
+            // 
+            visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
+            visualizarToolStripMenuItem.Size = new Size(180, 22);
+            visualizarToolStripMenuItem.Text = "Visualizar";
+            visualizarToolStripMenuItem.Click += visualizarToolStripMenuItem_Click;
+            // 
+            // abastecerToolStripMenuItem
+            // 
+            abastecerToolStripMenuItem.Name = "abastecerToolStripMenuItem";
+            abastecerToolStripMenuItem.Size = new Size(180, 22);
+            abastecerToolStripMenuItem.Text = "Abastecer";
+            abastecerToolStripMenuItem.Click += abastecerToolStripMenuItem_Click;
+            // 
             // ayudaToolStripMenuItem
             // 
+            ayudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { acercaDeToolStripMenuItem });
             ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             ayudaToolStripMenuItem.Size = new Size(53, 20);
             ayudaToolStripMenuItem.Text = "Ayuda";
@@ -166,6 +202,13 @@
             btnVerVenta.Text = "Ver Venta";
             btnVerVenta.UseVisualStyleBackColor = true;
             // 
+            // acercaDeToolStripMenuItem
+            // 
+            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            acercaDeToolStripMenuItem.Size = new Size(180, 22);
+            acercaDeToolStripMenuItem.Text = "Acerca De";
+            acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -208,5 +251,10 @@
         private TextBox txtProducto;
         private Label label1;
         private Button btnVerVenta;
+        private ToolStripMenuItem ventasToolStripMenuItem;
+        private ToolStripMenuItem abastecimientosToolStripMenuItem;
+        private ToolStripMenuItem visualizarToolStripMenuItem;
+        private ToolStripMenuItem abastecerToolStripMenuItem;
+        private ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }

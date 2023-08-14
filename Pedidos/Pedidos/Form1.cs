@@ -51,5 +51,37 @@ namespace Pedidos
             newProduct np = new newProduct();
             np.ShowDialog();
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OperationWindow.operation_type = 2;
+            OperationWindow ow = new OperationWindow();
+            ow.ShowDialog();
+        }
+
+        private void abastecimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OperationWindow.operation_type = 1;
+            OperationWindow ow = new OperationWindow();
+            ow.ShowDialog();
+        }
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inventory i = new Inventory();
+            i.ShowDialog();
+        }
+
+        private void abastecerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Abastecer ip = new Abastecer();
+            ip.ShowDialog();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About a = new About();
+            a.ShowDialog();
+        }
     }
 }
