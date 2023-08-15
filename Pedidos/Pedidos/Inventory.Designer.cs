@@ -49,6 +49,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Name = "Inventory";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Inventory";
             Load += Inventory_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

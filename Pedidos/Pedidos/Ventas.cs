@@ -1,11 +1,11 @@
 ﻿namespace Pedidos
 {
-    public partial class OperationWindow : Form
+    public partial class Ventas : Form
     {
         public static int operation_type;
         List<SellObj> sells;
 
-        public OperationWindow()
+        public Ventas()
         {
             InitializeComponent();
             if (operation_type == 1)

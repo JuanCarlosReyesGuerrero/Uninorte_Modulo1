@@ -1,6 +1,6 @@
 ﻿namespace Pedidos
 {
-    partial class OperationWindow
+    partial class Ventas
     {
         /// <summary>
         /// Required designer variable.

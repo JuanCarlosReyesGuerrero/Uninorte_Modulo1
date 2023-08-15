@@ -44,14 +44,24 @@
             visualizarToolStripMenuItem = new ToolStripMenuItem();
             abastecerToolStripMenuItem = new ToolStripMenuItem();
             ayudaToolStripMenuItem = new ToolStripMenuItem();
+            acercaDeToolStripMenuItem = new ToolStripMenuItem();
             dtgPrincipal = new DataGridView();
             btnBuscar = new Button();
             txtProducto = new TextBox();
             label1 = new Label();
-            btnVerVenta = new Button();
-            acercaDeToolStripMenuItem = new ToolStripMenuItem();
+            btnAgregar = new Button();
+            dataGridView1 = new DataGridView();
+            txtTotalCompra = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            txtCantidad = new TextBox();
+            btnEliminarRegistro = new Button();
+            btnGuardar = new Button();
+            btnCancelar = new Button();
+            pedidosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgPrincipal).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // statusStrip1
@@ -91,7 +101,7 @@
             // 
             // operacionesToolStripMenuItem
             // 
-            operacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ventasToolStripMenuItem, abastecimientosToolStripMenuItem });
+            operacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ventasToolStripMenuItem, abastecimientosToolStripMenuItem, pedidosToolStripMenuItem });
             operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
             operacionesToolStripMenuItem.Size = new Size(85, 20);
             operacionesToolStripMenuItem.Text = "Operaciones";
@@ -99,14 +109,14 @@
             // ventasToolStripMenuItem
             // 
             ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            ventasToolStripMenuItem.Size = new Size(162, 22);
+            ventasToolStripMenuItem.Size = new Size(180, 22);
             ventasToolStripMenuItem.Text = "Ventas";
             ventasToolStripMenuItem.Click += ventasToolStripMenuItem_Click;
             // 
             // abastecimientosToolStripMenuItem
             // 
             abastecimientosToolStripMenuItem.Name = "abastecimientosToolStripMenuItem";
-            abastecimientosToolStripMenuItem.Size = new Size(162, 22);
+            abastecimientosToolStripMenuItem.Size = new Size(180, 22);
             abastecimientosToolStripMenuItem.Text = "Abastecimientos";
             abastecimientosToolStripMenuItem.Click += abastecimientosToolStripMenuItem_Click;
             // 
@@ -141,14 +151,14 @@
             // visualizarToolStripMenuItem
             // 
             visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
-            visualizarToolStripMenuItem.Size = new Size(180, 22);
+            visualizarToolStripMenuItem.Size = new Size(126, 22);
             visualizarToolStripMenuItem.Text = "Visualizar";
             visualizarToolStripMenuItem.Click += visualizarToolStripMenuItem_Click;
             // 
             // abastecerToolStripMenuItem
             // 
             abastecerToolStripMenuItem.Name = "abastecerToolStripMenuItem";
-            abastecerToolStripMenuItem.Size = new Size(180, 22);
+            abastecerToolStripMenuItem.Size = new Size(126, 22);
             abastecerToolStripMenuItem.Text = "Abastecer";
             abastecerToolStripMenuItem.Click += abastecerToolStripMenuItem_Click;
             // 
@@ -159,13 +169,20 @@
             ayudaToolStripMenuItem.Size = new Size(53, 20);
             ayudaToolStripMenuItem.Text = "Ayuda";
             // 
+            // acercaDeToolStripMenuItem
+            // 
+            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            acercaDeToolStripMenuItem.Size = new Size(127, 22);
+            acercaDeToolStripMenuItem.Text = "Acerca De";
+            acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem_Click;
+            // 
             // dtgPrincipal
             // 
             dtgPrincipal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgPrincipal.Location = new Point(12, 81);
             dtgPrincipal.Name = "dtgPrincipal";
             dtgPrincipal.RowTemplate.Height = 25;
-            dtgPrincipal.Size = new Size(899, 605);
+            dtgPrincipal.Size = new Size(899, 132);
             dtgPrincipal.TabIndex = 4;
             // 
             // btnBuscar
@@ -176,6 +193,7 @@
             btnBuscar.TabIndex = 5;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // txtProducto
             // 
@@ -193,28 +211,109 @@
             label1.TabIndex = 7;
             label1.Text = "Producto";
             // 
-            // btnVerVenta
+            // btnAgregar
             // 
-            btnVerVenta.Location = new Point(836, 52);
-            btnVerVenta.Name = "btnVerVenta";
-            btnVerVenta.Size = new Size(75, 23);
-            btnVerVenta.TabIndex = 8;
-            btnVerVenta.Text = "Ver Venta";
-            btnVerVenta.UseVisualStyleBackColor = true;
+            btnAgregar.Location = new Point(169, 269);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(75, 23);
+            btnAgregar.TabIndex = 9;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
-            // acercaDeToolStripMenuItem
+            // dataGridView1
             // 
-            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            acercaDeToolStripMenuItem.Size = new Size(180, 22);
-            acercaDeToolStripMenuItem.Text = "Acerca De";
-            acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem_Click;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 298);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(899, 293);
+            dataGridView1.TabIndex = 10;
+            // 
+            // txtTotalCompra
+            // 
+            txtTotalCompra.Location = new Point(808, 607);
+            txtTotalCompra.Name = "txtTotalCompra";
+            txtTotalCompra.Size = new Size(103, 23);
+            txtTotalCompra.TabIndex = 11;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(724, 610);
+            label2.Name = "label2";
+            label2.Size = new Size(72, 15);
+            label2.TabIndex = 12;
+            label2.Text = "Total Pedido";
+            label2.Click += label2_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(7, 272);
+            label3.Name = "label3";
+            label3.Size = new Size(55, 15);
+            label3.TabIndex = 14;
+            label3.Text = "Cantidad";
+            // 
+            // txtCantidad
+            // 
+            txtCantidad.Location = new Point(68, 269);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(95, 23);
+            txtCantidad.TabIndex = 13;
+            // 
+            // btnEliminarRegistro
+            // 
+            btnEliminarRegistro.Location = new Point(250, 268);
+            btnEliminarRegistro.Name = "btnEliminarRegistro";
+            btnEliminarRegistro.Size = new Size(98, 23);
+            btnEliminarRegistro.TabIndex = 15;
+            btnEliminarRegistro.Text = "Eliminar Fila";
+            btnEliminarRegistro.UseVisualStyleBackColor = true;
+            btnEliminarRegistro.Click += btnEliminarRegistro_Click;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(474, 658);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(75, 23);
+            btnGuardar.TabIndex = 17;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(377, 658);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 16;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // pedidosToolStripMenuItem
+            // 
+            pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
+            pedidosToolStripMenuItem.Size = new Size(180, 22);
+            pedidosToolStripMenuItem.Text = "Pedidos";
+            pedidosToolStripMenuItem.Click += pedidosToolStripMenuItem_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(923, 720);
-            Controls.Add(btnVerVenta);
+            Controls.Add(btnGuardar);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnEliminarRegistro);
+            Controls.Add(label3);
+            Controls.Add(txtCantidad);
+            Controls.Add(label2);
+            Controls.Add(txtTotalCompra);
+            Controls.Add(dataGridView1);
+            Controls.Add(btnAgregar);
             Controls.Add(label1);
             Controls.Add(txtProducto);
             Controls.Add(btnBuscar);
@@ -229,6 +328,7 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgPrincipal).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -250,11 +350,20 @@
         private Button btnBuscar;
         private TextBox txtProducto;
         private Label label1;
-        private Button btnVerVenta;
         private ToolStripMenuItem ventasToolStripMenuItem;
         private ToolStripMenuItem abastecimientosToolStripMenuItem;
         private ToolStripMenuItem visualizarToolStripMenuItem;
         private ToolStripMenuItem abastecerToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
+        private Button btnAgregar;
+        private DataGridView dataGridView1;
+        private TextBox txtTotalCompra;
+        private Label label2;
+        private Label label3;
+        private TextBox txtCantidad;
+        private Button btnEliminarRegistro;
+        private Button btnGuardar;
+        private Button btnCancelar;
+        private ToolStripMenuItem pedidosToolStripMenuItem;
     }
 }
